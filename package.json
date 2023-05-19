@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/snaomix/gh-pages#readme",
   "devDependencies": {
-    "css-loader": "^6.7.3",
+    "css-loader": "^6.7.4",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.5",
     "prettier": "^2.8.8",
