@@ -10,6 +10,7 @@ $body-color: #666;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
@@ -30,8 +31,8 @@ $body-color: #666;
 // @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
 
-// @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";

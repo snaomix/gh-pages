@@ -29,7 +29,7 @@ module.exports = {
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
       // Add safelist for bootstrap classes which added dynamically
-      safelist: [/^carousel-/, /^collaps/]
+      safelist: [/^carousel-/, /^collaps/, /^show/]
     }),
   ],
   module: {
