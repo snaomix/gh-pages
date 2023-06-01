@@ -3,5 +3,14 @@
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-recess-order"
-  ]
+  ],
+  "rules": {
+    "number-max-precision": 6,
+    "value-keyword-case": [
+      "lower",
+      {
+        "camelCaseSvgKeywords": true
+      }
+    ]
+  }
 }
