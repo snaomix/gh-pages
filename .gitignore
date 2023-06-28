@@ -2,10 +2,5 @@ node_modules/
 dist/
 docs/
 .idea/
-*.jpg
-*.gif
-*.png
-*.ico
-*.svg
 *.swp
 *.log

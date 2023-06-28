@@ -14,6 +14,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'docs'),
+    assetModuleFilename: 'images/[name][ext]',
     clean: true,
   },
   plugins: [
@@ -56,6 +57,13 @@ module.exports = {
             }
           }
         ],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          minimize: false,
+        }
       },
     ],
   },
