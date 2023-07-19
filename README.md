@@ -12,6 +12,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 * [fibers](https://github.com/laverdet/node-fibers) はNode.js v16.0.0以降と互換性がないため使用していません :no_good:
 * [Stylelint]、[Prettier]を使用してスタイルのチェック、JS整形を追加
 * [GitHub Actions]を使用してデプロイする方法に変更
+* [HTMLHint]を使用してHTMLのチェックを追加
 
 ## how to start
 
@@ -46,6 +47,11 @@ Sass(SCSS)をチェックする([Prettier])
 npm run check:css
 ```
 
+HTMLをチェックする([HTMLHint])
+```bash
+npm run check:html
+```
+
 Sass(SCSS)を整形する([Prettier]) :warning: ファイルが上書きされます
 ```bash
 npm run format:css
@@ -64,6 +70,7 @@ npm run format
 [unsplash]: https://unsplash.com/
 [Stylelint]: https://stylelint.io/
 [Prettier]: https://prettier.io/
+[HTMLHint]: https://htmlhint.com/
 
 ## more info
 

@@ -6,6 +6,15 @@ const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 const PATHS = {
   src: path.join(__dirname, 'src')
 }
+const confMinify = {
+  collapseWhitespace: false,
+  keepClosingSlash: true,
+  removeComments: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  useShortDoctype: true
+};
 
 module.exports = {
   entry: {
@@ -20,7 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: `./src/index.html`,
-      minify: false,
+      minify: confMinify,
       inject: true,
       hash: false
     }),
