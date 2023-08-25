@@ -1,6 +1,6 @@
 # gh-pages
 
-[![Deploy GitHub Pages](https://github.com/snaomix/gh-pages/actions/workflows/build.yml/badge.svg)](https://github.com/snaomix/gh-pages/actions/workflows/build.yml)
+[![Deploy GitHub Pages](../../actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
 
 webpackを使って[GitHub Pages]へウェブサイトをデプロイするちょっとしたデモ。
 webpackの[getting started]チュートリアルにしたがってスタートします。
