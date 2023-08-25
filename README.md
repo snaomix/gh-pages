@@ -13,6 +13,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 * [Stylelint]、[Prettier]を使用してスタイルのチェック、JS整形を追加
 * [GitHub Actions]を使用してデプロイする方法に変更
 * [HTMLHint]を使用してHTMLのチェックを追加
+* Template repository化(for GitHub users)
 
 ## how to start
 
@@ -62,6 +63,11 @@ JS, JSONを整形する([Prettier]) :warning: ファイルが上書きされま�
 ```bash
 npm run format
 ```
+
+## setting GitHub Actions & run workflow
+1. GitHub Freeの場合、パブリックリポジトリに設定しておく
+1. Settings > Pages > Build and deploymentのSourceを「GitHub Actions」を選択
+1. Actions > Deploy GitHub Pages > Run workflow > 「Run workflow」を選択
 
 [GitHub Pages]: https://docs.github.com/ja/pages
 [GitHub Actions]: https://docs.github.com/ja/actions
