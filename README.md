@@ -8,7 +8,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 
 ## note:
 * webpack v5以降を使用しています
-* Node.js v18.0.0以降 ＋dart-sassを使用
+* Node.js v20以降(see [Node.js release schedule]) ＋dart-sassを使用
 * [fibers](https://github.com/laverdet/node-fibers) はNode.js v16.0.0以降と互換性がないため使用していません :no_good:
 * [Stylelint]、[Prettier]を使用してスタイルのチェック、JS整形を追加
 * [GitHub Actions]を使用してデプロイする方法に変更
@@ -77,6 +77,7 @@ npm run format
 [Stylelint]: https://stylelint.io/
 [Prettier]: https://prettier.io/
 [HTMLHint]: https://htmlhint.com/
+[Node.js release schedule]: https://github.com/nodejs/release#release-schedule
 
 ## more info
 

@@ -1,7 +1,7 @@
 # dependabot.yml
 version: 2
 updates:
-# Configuration for npm
+  # Configuration for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
