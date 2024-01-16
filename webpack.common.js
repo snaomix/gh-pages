@@ -46,26 +46,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          // inject CSS to page
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          // "style-loader",
-          // translates CSS into CommonJS modules
-          "css-loader",
-          {
-            // compiles Sass to CSS
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require("sass"),
-              sassOptions: {
-                fiber: false,
-              }
-            }
-          }
-        ],
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ],
       },
       {
         test: /\.html$/i,
