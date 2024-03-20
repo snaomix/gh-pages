@@ -24,8 +24,8 @@
   "author": "snaomix",
   "license": "ISC",
   "engines": {
-    "node": ">=20.8.1",
-    "npm": ">=10.1.0"
+    "node": ">=20.11.1",
+    "npm": ">=10.2.4"
   },
   "bugs": {
     "url": "https://github.com/snaomix/gh-pages/issues"
@@ -50,7 +50,7 @@
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.3",
+    "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
