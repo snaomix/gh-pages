@@ -39,7 +39,7 @@
     "image-minimizer-webpack-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^2.8.1",
     "prettier": "^3.2.5",
-    "purgecss-webpack-plugin": "^5.0.0",
+    "purgecss-webpack-plugin": "^6.0.0",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
     "sharp": "^0.33.3",
