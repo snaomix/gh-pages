@@ -20,13 +20,13 @@ module.exports = merge(common, {
         test: /\.(png|jpe?g)$/i,
         generator: [
           {
-            preset: "webp",
+            preset: "avif",
             implementation: ImageMinimizerPlugin.sharpGenerate,
             options: {
               // Your options for `sharp`
               encodeOptions: {
-                webp: {
-                  quality: 20,
+                avif: {
+                  quality: 30,
                 },
               },
             },

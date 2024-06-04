@@ -31,15 +31,15 @@ body {
     background-size: cover;
 
     &:nth-child(1) {
-      background-image: url("../images/cristian-escobar-abkEAOjnY0s-unsplash.jpg?as=webp");
+      background-image: url("../images/cristian-escobar-abkEAOjnY0s-unsplash.jpg?as=avif");
     }
 
     &:nth-child(2) {
-      background-image: url("../images/chris-lawton-5IHz5WhosQE-unsplash.jpg?as=webp");
+      background-image: url("../images/chris-lawton-5IHz5WhosQE-unsplash.jpg?as=avif");
     }
 
     &:nth-child(3) {
-      background-image: url("../images/aaron-burden-WS89mmrCU8U-unsplash.jpg?as=webp");
+      background-image: url("../images/aaron-burden-WS89mmrCU8U-unsplash.jpg?as=avif");
     }
   }
 }
@@ -66,6 +66,7 @@ body {
 .bd-placeholder-img {
   width: 140px;
   height: 140px;
+  object-fit: cover;
 }
 
 /* rtl:end:ignore */
