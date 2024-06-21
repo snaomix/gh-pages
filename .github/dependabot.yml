@@ -8,3 +8,12 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+  # Configuration for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
