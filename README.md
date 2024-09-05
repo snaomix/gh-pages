@@ -9,9 +9,8 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 ## note:
 * webpack v5以降を使用しています
 * Node.js v20以降(see [Node.js release schedule]) ＋dart-sassを使用
-* [Stylelint]、[Prettier]を使用してスタイルのチェック、JS整形を追加
-* [GitHub Actions]を使用してデプロイする方法に変更
-* [HTMLHint]を使用してHTMLのチェックを追加
+* [GitHub Actions]を使用してデプロイ
+* [Stylelint]、[Prettier]、[ESLint]を使用(HTMLHintによるチェック廃止)
 * Template repository化(for GitHub users)
 
 ## how to start
@@ -47,9 +46,14 @@ Sass(SCSS)をチェックする([Prettier])
 npm run check:css
 ```
 
-HTMLをチェックする([HTMLHint])
+HTMLをチェックする([ESLint])
 ```bash
-npm run check:html
+npm run lint:html
+```
+
+JSをチェックする([ESLint])
+```bash
+npm run lint:js
 ```
 
 Sass(SCSS)を整形する([Prettier]) :warning: ファイルが上書きされます
@@ -75,7 +79,7 @@ npm run format
 [unsplash]: https://unsplash.com/
 [Stylelint]: https://stylelint.io/
 [Prettier]: https://prettier.io/
-[HTMLHint]: https://htmlhint.com/
+[ESLint]: https://eslint.org/
 [Node.js release schedule]: https://github.com/nodejs/release#release-schedule
 
 ## more info
