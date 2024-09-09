@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/snaomix/gh-pages#readme",
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.10.0",
     "@html-eslint/eslint-plugin": "^0.26.0",
     "@html-eslint/parser": "^0.26.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^11.0.0",
     "html-loader": "^5.1.0",
