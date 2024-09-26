@@ -6,6 +6,7 @@
   ],
   "rules": {
     "number-max-precision": 6,
+    "scss/load-partial-extension": "never",
     "scss/at-import-partial-extension": null,
     "value-keyword-case": [
       "lower",
