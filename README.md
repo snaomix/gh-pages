@@ -8,7 +8,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 
 ## note:
 * webpack v5以降を使用しています
-* Node.js v20以降(see [Node.js release schedule]) ＋dart-sassを使用
+* Node.js v22以降(see [Node.js release schedule])
 * [GitHub Actions]を使用してデプロイ
 * [Stylelint]、[Prettier]、[ESLint]を使用(HTMLHintによるチェック廃止)
 * Template repository化(for GitHub users)
