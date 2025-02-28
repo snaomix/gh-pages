@@ -5,7 +5,6 @@ const globals = require("globals");
 const eslintConfigPrettier = require("eslint-config-prettier");
 
 module.exports = [
-  eslintConfigPrettier,
   {
     files: ['**/*.js'],
     rules: {
@@ -36,4 +35,5 @@ module.exports = [
       parser: htmlParser,
     },
   },
+  eslintConfigPrettier,
 ];
