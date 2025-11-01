@@ -8,7 +8,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 
 ## note:
 * webpack v5以降を使用しています
-* Node.js v22以降(see [Node.js release schedule])
+* Node.js v24以降(see [Node.js release schedule])
 * [GitHub Actions]を使用してデプロイ
 * [Stylelint]、[Prettier]、[ESLint]を使用(HTMLHintによるチェック廃止)
 * Template repository化(for GitHub users)
