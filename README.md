@@ -26,24 +26,37 @@ cd gh-pages
 npm install
 ```
 
-ウェブサイトをビルド:
+## scripts
+
+### 開発
+
+開発サーバーを起動（localhost:8080）
+```bash
+npm run start
+```
+
+### ビルド
+
+本番用にビルド（docs ディレクトリに出力）
 ```bash
 npm run build
 ```
 
-ウェブサイトをdevモードで起動:
-```bash
-npm run start
-```
+### リント・フォーマット
 
 Sass(SCSS)をチェックする([Stylelint])
 ```bash
 npm run lint:css
 ```
 
-Sass(SCSS)をチェックする([Prettier])
+Sass(SCSS)のフォーマットチェック([Prettier])
 ```bash
 npm run check:css
+```
+
+Sass(SCSS)を自動修正([Stylelint]) :warning: ファイルが上書きされます
+```bash
+npm run fix:css
 ```
 
 HTMLをチェックする([ESLint])
@@ -54,6 +67,16 @@ npm run lint:html
 JSをチェックする([ESLint])
 ```bash
 npm run lint:js
+```
+
+JS, JSONのフォーマットチェック([Prettier])
+```bash
+npm run check:js
+```
+
+JSを自動修正([ESLint]) :warning: ファイルが上書きされます
+```bash
+npm run fix:js
 ```
 
 Sass(SCSS)を整形する([Prettier]) :warning: ファイルが上書きされます

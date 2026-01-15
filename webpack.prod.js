@@ -1,10 +1,10 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
-const TerserPlugin = require('terser-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+import { merge } from "webpack-merge";
+import common from "./webpack.common.js";
+import TerserPlugin from "terser-webpack-plugin";
+import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 
-module.exports = merge(common, {
-  mode: 'production',
+export default merge(common, {
+  mode: "production",
   optimization: {
     minimize: true,
     minimizer: [
@@ -34,5 +34,5 @@ module.exports = merge(common, {
         ],
       }),
     ],
-  }
+  },
 });

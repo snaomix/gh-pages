@@ -1,7 +1,7 @@
 // import javascript for carousel, navbar, dropdown.
-import "bootstrap/js/src/collapse";
-import "bootstrap/js/src/carousel";
-import "bootstrap/js/src/dropdown";
+import "bootstrap/js/src/collapse.js";
+import "bootstrap/js/src/carousel.js";
+import "bootstrap/js/src/dropdown.js";
 
 import "./scss/style.scss";
 
@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== "production") {
   console.log("Looks like we are in development mode!");
 }
 
-let sub = require("./module/sub");
+import sub from "./module/sub.js";
 sub();
 
 // ref: https://getbootstrap.com/docs/5.3/assets/js/color-modes.js

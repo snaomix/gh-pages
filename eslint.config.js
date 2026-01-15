@@ -1,17 +1,17 @@
-const html = require("@html-eslint/eslint-plugin");
-const js = require("@eslint/js");
-const globals = require("globals");
-const eslintConfigPrettier = require("eslint-config-prettier");
+import html from "@html-eslint/eslint-plugin";
+import js from "@eslint/js";
+import globals from "globals";
+import eslintConfigPrettier from "eslint-config-prettier";
 
-module.exports = [
+export default [
   {
     ...js.configs.recommended,
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     languageOptions: {
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
       },
     },
   },
@@ -26,9 +26,10 @@ module.exports = [
       ...html.configs.recommended.rules,
       "html/attrs-newline": "off",
       "html/indent": ["error", 2],
-      "html/require-closing-tags": "error",
-      "html/no-extra-spacing-attrs": ["error", { "enforceBeforeSelfClose": true }],
+      "html/require-closing-tags": ["error"],
+      "html/no-extra-spacing-attrs": ["error", { enforceBeforeSelfClose: true }],
     },
   },
   eslintConfigPrettier,
+  { ignores: ["**/docs/", "**/node_modules/", "**/.git/", "**/.github/"] },
 ];

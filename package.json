@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "private": true,
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -11,12 +12,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint:css": "stylelint src/scss/*.scss",
-    "check:css": "prettier --check 'src/scss/*.scss'",
+    "lint:css": "stylelint **/*.scss",
+    "fix:css": "stylelint --fix **/*.scss",
+    "check:css": "prettier --check '**/*.scss'",
+    "check:js": "prettier --check '**/*.{js,json}'",
     "format:css": "prettier --write 'src/scss/*.scss'",
-    "format": "prettier --write 'src/**/*.{js,json}'",
-    "lint:js": "eslint 'src/**/*.js'",
-    "lint:html": "eslint 'src/**/*.html'"
+    "format": "prettier --write '**/*.{js,json}'",
+    "lint:js": "eslint '**/*.js'",
+    "fix:js": "eslint --fix '**/*.js'",
+    "lint:html": "eslint '**/*.html'"
   },
   "repository": {
     "type": "git",
@@ -48,10 +52,10 @@
     "sass": "1.77.6",
     "sass-loader": "^16.0.6",
     "sharp": "^0.34.5",
-    "stylelint": "^16.26.1",
+    "stylelint": "^17.0.0",
     "stylelint-config-recess-order": "^7.4.0",
-    "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-scss": "^6.14.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^7.0.0",
     "terser-webpack-plugin": "^5.3.16",
     "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1",
