@@ -1,8 +1,8 @@
-import * as path from "path";
-import * as glob from "glob";
+import path from "node:path";
+import { globSync } from "glob";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { PurgeCSSPlugin } from "purgecss-webpack-plugin";
+import purgecss from '@fullhuman/postcss-purgecss';
 
 const __dirname = import.meta.dirname;
 const PATHS = {
@@ -19,9 +19,7 @@ const confMinify = {
 };
 
 export default {
-  entry: {
-    index: "./src/index.js",
-  },
+  entry: "./src/index.js",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "docs"),
@@ -38,17 +36,29 @@ export default {
     new MiniCssExtractPlugin({
       filename: "[name].style.css",
     }),
-    new PurgeCSSPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-      // Add safelist for bootstrap classes which added dynamically
-      safelist: [/^carousel-/, /^collaps/, /^show/],
-    }),
   ],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  purgecss({
+                    content: globSync(`${PATHS.src}/**/*`, { nodir: true }),
+                    safelist: [/^carousel-/, /^collaps/, /^show/],
+                  }),
+                ],
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
       {
         test: /\.html$/i,
