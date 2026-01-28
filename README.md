@@ -10,7 +10,7 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 * webpack v5以降を使用しています
 * Node.js v24以降(see [Node.js release schedule])
 * [GitHub Actions]を使用してデプロイ
-* [Stylelint]、[Prettier]、[ESLint]を使用(HTMLHintによるチェック廃止)
+* [Stylelint]、[Prettier]、[ESLint]を使用
 * Template repository化(for GitHub users)
 
 ## how to start
@@ -37,7 +37,7 @@ npm run start
 
 ### ビルド
 
-本番用にビルド（docs ディレクトリに出力）
+本番用にビルド（dist ディレクトリに出力）
 ```bash
 npm run build
 ```

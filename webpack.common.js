@@ -2,7 +2,7 @@ import path from "node:path";
 import { globSync } from "glob";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import purgecss from '@fullhuman/postcss-purgecss';
+import purgecss from "@fullhuman/postcss-purgecss";
 
 const __dirname = import.meta.dirname;
 const PATHS = {
@@ -22,7 +22,6 @@ export default {
   entry: "./src/index.js",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "docs"),
     assetModuleFilename: "images/[name][ext]",
     clean: true,
   },
@@ -45,7 +44,7 @@ export default {
           MiniCssExtractPlugin.loader,
           "css-loader",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
                 plugins: [

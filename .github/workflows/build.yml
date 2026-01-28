@@ -41,11 +41,11 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3
         with:
-          subject-path: './docs'
+          subject-path: './dist'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./docs
+          path: ./dist
 
   deploy:
     needs: build
