@@ -56,7 +56,15 @@ export default {
               },
             },
           },
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                quietDeps: true,
+                silenceDeprecations: ["import"],
+              },
+            },
+          },
         ],
       },
       {
