@@ -26,7 +26,7 @@
   "author": "snaomix",
   "license": "ISC",
   "engines": {
-    "node": ">=22",
+    "node": "24.*",
     "npm": ">=10.9.4"
   },
   "bugs": {
