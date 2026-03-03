@@ -39,7 +39,7 @@ jobs:
       - name: Build
         run: npm run build --if-present
       - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v4
+        uses: actions/attest@v4
         with:
           subject-path: './dist'
       - name: Upload artifact
