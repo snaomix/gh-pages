@@ -1,5 +1,5 @@
 import path from "node:path";
-import { globSync } from "glob";
+import { readdirSync } from "node:fs";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import purgecss from "@fullhuman/postcss-purgecss";
@@ -49,7 +49,9 @@ export default {
               postcssOptions: {
                 plugins: [
                   purgecss({
-                    content: globSync(`${PATHS.src}/**/*`, { nodir: true }),
+                    content: readdirSync(PATHS.src, { recursive: true, withFileTypes: true })
+                      .filter((dirent) => dirent.isFile())
+                      .map((dirent) => path.join(dirent.parentPath, dirent.name)),
                     safelist: [/^carousel-/, /^collaps/, /^show/],
                   }),
                 ],
