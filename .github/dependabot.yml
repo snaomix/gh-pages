@@ -9,14 +9,12 @@ updates:
       time: "09:00"
       timezone: "Asia/Tokyo"
     groups:
-      sass-only:
+      sass-related:
         patterns:
-          - "sass"
+          - "*sass*"
       others:
         patterns:
           - "*"
-        exclude-patterns:
-          - "sass"
   # Configuration for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
