@@ -25,6 +25,7 @@ export default [
     rules: {
       ...html.configs.recommended.rules,
       "html/attrs-newline": "off",
+      "html/no-extra-spacing-tags": "off",
       "html/indent": ["error", 2],
       "html/require-closing-tags": ["error"],
       "html/no-extra-spacing-attrs": ["error", { enforceBeforeSelfClose: true }],
