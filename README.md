@@ -95,6 +95,27 @@ npm run format
 1. Settings > Pages > Build and deploymentのSourceを「GitHub Actions」を選択
 1. Actions > Deploy GitHub Pages > Run workflow > 「Run workflow」を選択
 
+## ⚙️ CI/CD とセキュリティ（GitHub Actions）について
+
+**SBOM（ソフトウェア部品構成表）の自動生成**と**ビルド証明（Attestation）の作成**を自動で行っています。
+
+> [!IMPORTANT]
+> リポジトリまたは組織のActions設定で **「Allow actions created by GitHub（GitHub公式アクションのみ許可）」** という制限を有効にしている場合、SBOM生成に使用している **Anchore社のSyft（[anchore/sbom-action]）** がブロックされ、ワークフローがエラーになります。
+> その場合は、以下の手順でこのアクションを個別に許可してください。
+
+<details>
+<summary><b>🛠️ ワークフローを実行するためのGitHub Actions設定手順（クリックで開く）</b></summary>
+
+1. リポジトリの Settings ＞ Actions ＞ General を開きます。
+2. **「Allow actions created by GitHub」** にチェックが入っていることを確認します。
+3. その下にあるテキストエリア（Allow or block specified actions and reusable workflows）に、以下の2行を改行して入力します。
+
+```text
+anchore/sbom-action@*
+anchore/sbom-action/download-syft@*
+```
+</details>
+
 [GitHub Pages]: https://docs.github.com/ja/pages
 [GitHub Actions]: https://docs.github.com/ja/actions
 [getting started]: https://webpack.js.org/guides/getting-started/
@@ -104,6 +125,7 @@ npm run format
 [Prettier]: https://prettier.io/
 [ESLint]: https://eslint.org/
 [Node.js release schedule]: https://github.com/nodejs/release#release-schedule
+[anchore/sbom-action]: https://github.com/anchore/sbom-action
 
 ## more info
 
