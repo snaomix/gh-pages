@@ -43,10 +43,16 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build --if-present
+      - name: Generate SBOM via Syft
+        uses: anchore/sbom-action@v0
+        with:
+          format: 'spdx-json'
+          output-file: 'sbom.spdx.json'
       - name: Generate artifact attestation
         uses: actions/attest@v4
         with:
           subject-path: './dist'
+          sbom-path: 'sbom.spdx.json'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
