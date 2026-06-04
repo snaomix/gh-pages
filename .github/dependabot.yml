@@ -17,7 +17,11 @@ updates:
           - "*"
     # Packages released less than 7 days ago will be rejected for installation.
     # Match the min-release-age in .npmrc.
-    min-release-age: "7"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
   # Configuration for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
