@@ -19,9 +19,9 @@ updates:
     # Match the min-release-age in .npmrc.
     cooldown:
       default-days: 7
-      semver-major-days: 14
+      semver-major-days: 7
       semver-minor-days: 7
-      semver-patch-days: 3
+      semver-patch-days: 7
   # Configuration for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
