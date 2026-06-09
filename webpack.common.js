@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import purgecss from "@fullhuman/postcss-purgecss";
 
 const __dirname = import.meta.dirname;
-const PATHS = {
+export const PATHS = {
   src: path.join(__dirname, "src"),
 };
 const confMinify = {

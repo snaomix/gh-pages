@@ -1,0 +1,100 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Podman: Preview Production Build",
+      "type": "shell",
+      "command": "podman run --rm -it --name gh-pages-preview -p 3001:3001 -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run build && npx serve dist -p 3001 -n' || [ $? -eq 130 ]",
+      "group": {
+        "kind": "build"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Docker: Preview Production Build",
+      "type": "shell",
+      "command": "docker run --rm -it --name gh-pages-preview -p 3001:3001 -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run build && npx serve dist -p 3001 -n' || [ $? -eq 130 ]",
+      "group": {
+        "kind": "build"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Podman: Start Dev Server",
+      "type": "shell",
+      "command": "podman run --rm -it --name gh-pages-app -p 8080:8080 -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run start' || [ $? -eq 130 ]",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Docker: Start Dev Server",
+      "type": "shell",
+      "command": "docker run --rm -it --name gh-pages-app -p 8080:8080 -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run start' || [ $? -eq 130 ]",
+      "group": {
+        "kind": "build"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Podman: Run All Lint/Format",
+      "type": "shell",
+      "command": "podman run --rm -it --name gh-pages-lint -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run fix:css && npm run fix:js && npm run format:css && npm run format && npm run lint:css && npm run check:css && npm run check:js && npm run lint:js && npm run lint:html'",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Run All Lint/Format",
+      "type": "shell",
+      "command": "docker run --rm -it --name gh-pages-lint -v \"$(pwd)\":/app -v /app/node_modules gh-pages-image sh -c 'npm run fix:css && npm run fix:js && npm run format:css && npm run format && npm run lint:css && npm run check:css && npm run check:js && npm run lint:js && npm run lint:html'",
+      "group": {
+        "kind": "test"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}
