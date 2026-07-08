@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "gh-pages",
+  "image": "node:24-slim",
+
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "mounts": [
+    // Isolate only node_modules in the container to a separate "named volume" that is not synchronized with the host PC.
+    "source=${localWorkspaceFolderBasename}-node-modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/git:1.3.7": {}
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Uncomment the next line to run commands after the container is created.
+  // NOTE: This container operates in UTC to ensure environment consistency.
+  // Generated files will have UTC timestamps, which might differ from your local machine's time.
+  "postCreateCommand": "npm ci && apt-get update && apt-get install -y openssh-client",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "bierner.github-markdown-preview"]
+    }
+  },
+  "runArgs": ["-p", "8080:8080"]
+
+  // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "devcontainer"
+}

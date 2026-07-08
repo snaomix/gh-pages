@@ -5,7 +5,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
-  { ignores: ["**/dist/", "**/docs/", "**/node_modules/", "**/.git/", "**/.github/"] },
+  { ignores: ["**/dist/", "**/node_modules/", "**/.git/", "**/.github/"] },
   {
     files: ["**/*.js"],
     ...js.configs.recommended,
