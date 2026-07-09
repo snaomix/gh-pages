@@ -31,7 +31,7 @@ cd gh-pages
 ### コンテナ開発する場合
 
 #### 前提条件
-- **コンテナ実行環境（[Podman] または Docker）が利用可能であること**
+- **コンテナ実行環境（[Podman] または Docker）がインストールされ、起動していること**
 - VS Code、VS Codeの拡張機能: [Dev Containers]をインストール＆有効化
 
 1. VS Code を開きます。

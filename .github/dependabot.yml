@@ -22,6 +22,14 @@ updates:
       semver-major-days: 7
       semver-minor-days: 7
       semver-patch-days: 7
+  # Configuration for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "node"
+        versions: [">= 25.0.0"]
   # Configuration for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
