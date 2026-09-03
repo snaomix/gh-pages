@@ -51,7 +51,7 @@
     "sass": "^1.103.1",
     "sass-embedded": "^1.103.1",
     "sass-loader": "^17.0.0",
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.4",
     "stylelint": "^17.14.1",
     "stylelint-config-recess-order": "^7.8.0",
     "stylelint-config-standard-scss": "^17.0.0",
