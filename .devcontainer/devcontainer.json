@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
   "name": "gh-pages",
-  "image": "node:24-slim",
+  "image": "node:26-slim",
 
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 

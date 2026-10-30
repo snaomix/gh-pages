@@ -26,8 +26,8 @@
   "author": "snaomix",
   "license": "ISC",
   "engines": {
-    "node": "24.*",
-    "npm": ">=10.9.4"
+    "node": "26.*",
+    "npm": ">=11.20.0"
   },
   "bugs": {
     "url": "https://github.com/snaomix/gh-pages/issues"

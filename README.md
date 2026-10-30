@@ -8,11 +8,11 @@ webpackの[getting started]チュートリアルにしたがってスタート�
 
 ## note:
 * webpack v5以降を使用しています
-* Node.js v24以降(see [Node.js release schedule])
+* Node.js v26以降(see [Node.js release schedule])
 * [GitHub Actions]を使用してデプロイ
 * [Stylelint]、[Prettier]、[ESLint]を使用
 * Template repository化(for GitHub users)
-* コンテナ化対応（[Podman] / Docker 対応・`node:24-slim` ベース）
+* コンテナ化対応（[Podman] / Docker 対応・`node:26-slim` ベース）
 * VS Code「[Dev Containers]」対応
 
 ## how to start
