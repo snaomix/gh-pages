@@ -1,5 +1,5 @@
 # 1. ベースイメージを指定する
-FROM node:24-slim
+FROM node:26-slim
 
 # 2. コンテナ内の作業ディレクトリを指定
 WORKDIR /app
