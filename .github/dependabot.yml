@@ -12,6 +12,9 @@ updates:
       sass-related:
         patterns:
           - "*sass*"
+      stylelint-related:
+        patterns:
+          - "*stylelint*"
       others:
         patterns:
           - "*"
